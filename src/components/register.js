@@ -25,6 +25,7 @@ export class Register extends Component {
                 .post("http://localhost:8080/user/create", newItem)
 
                 .then(response => {
+                    window.alert("Your user id is: " + response.data.id)
                 });
         }
 

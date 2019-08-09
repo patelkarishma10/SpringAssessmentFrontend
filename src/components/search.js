@@ -28,7 +28,6 @@ export class Search extends Component {
                    this.setState({
                     responseData: (response.data)
                 });
-                    console.log(response.data);
                     this.props.passedFunction();
                 })
                 .catch(err => { this.setState({ message: "username not found" }); });
@@ -55,7 +54,7 @@ export class Search extends Component {
 
                 <p style={{ color: 'red' }}>{this.state.message}</p>
 
-                <Table style={{ color: 'red' }}>
+                <Table>
                     <SearchResponse responseData={this.state.responseData} />
                 </Table>
             </div>
